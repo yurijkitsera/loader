@@ -1,0 +1,58 @@
+body {
+  background: #f5f5f5;
+}
+
+.container {
+  width: 1186px;
+  
+  margin: 40px 60px;
+}
+
+.form-wrap {
+  display: flex;
+  flex-direction:column;
+  width: 1000px;
+  height: 370px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 61px;
+}
+
+#successCount {
+  color: var(--text-01-default, rgba(0, 0, 0, 0.96));
+  font-family: Pryvat Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 15px;
+}
+#csvFileInput{
+  margin-top: 15px;
+  margin-bottom: 30px;
+  width: 420px;
+  
+}
+
+#apiUrlInput{
+  margin-bottom: 30px;
+  width: 420px;
+height: 40px;
+padding-left: 12px;
+}
+
+#uploadButton{
+  margin-bottom: 30px;
+  width: 268px;
+height: 40px;
+border-radius: 6px;
+background: var(--background-01-primary, #4EA524);
+color: #fff;
+border-color: transparent;
+}
+
+#uploadButton:hover{
+  background-color: #fff;
+  color: black;
+  border-color: black;
+  cursor: pointer;
+}
