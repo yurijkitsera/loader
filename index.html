@@ -39,6 +39,7 @@
           <button id="uploadButton">Завантажити</button>
           <div id="uploadProgress"></div>
           <div id="successCount"></div>
+          <div id="readLine"></div>
         </div>
       </div>
     </div>
@@ -57,7 +58,8 @@
             var reader = new FileReader();
             reader.onload = function (e) {
               var lines = e.target.result.split("\n");
-              totalLines = lines.length - 1;
+           
+              totalLines = lines.length -1;
 
               $("#uploadButton").hide();
               $("#uploadProgress").show();
@@ -73,6 +75,10 @@
 
                 for (var j = 0; j < headers.length; j++) {
                   data[headers[j]] = values[j];
+                  
+                  $("#readLine").text(
+                      "Останній запис: " + JSON.stringify(data)
+                    );
                 }
 
                 $.ajax({
